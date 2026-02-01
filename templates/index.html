@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SLR Height to Weight Prediction</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .box {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(8px);
+        padding: 25px;
+        border-radius: 12px;
+        width: 340px;
+        text-align: center;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        color: #222;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        font-size: 16px;
+        background: #2f80ed;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #1c5fd4;
+    }
+
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #111;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>SLR Height → Weight Prediction</h2>
+
+    <input type="number" step="0.01" id="height" placeholder="Enter height (meters)">
+
+    <button onclick="predict()">Predict Weight</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+/* ===== AUTO BACKGROUND SLIDER ===== */
+var backgrounds = [
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+];
+
+var index = 0;
+document.body.style.backgroundImage = "url('" + backgrounds[index] + "')";
+
+setInterval(function () {
+    index = (index + 1) % backgrounds.length;
+    document.body.style.backgroundImage = "url('" + backgrounds[index] + "')";
+}, 5000); // change every 5 seconds
+
+/* ===== SLR PREDICTION ===== */
+function predict() {
+    var h = document.getElementById("height").value;
+
+    if (h === "" || h <= 0) {
+        document.getElementById("result").innerHTML = "Please enter valid height!";
+        return;
+    }
+
+    // SLR equation from dataset
+    var weight = (61.27 * h - 39.06).toFixed(2);
+
+    document.getElementById("result").innerHTML =
+        "Predicted Weight: " + weight + " kg";
+}
+</script>
+
+</body>
+</html>
