@@ -4,9 +4,9 @@
 
 # 📌 Project Overview
 
-      This project implements a Simple Linear Regression (SLR) model to predict a person’s weight based on their height.
+ - This project implements a Simple Linear Regression (SLR) model to predict a person’s weight based on their height.
 
-      The goal is to understand the relationship between a single independent variable (height) and a dependent variable (weight)
+ - The goal is to understand the relationship between a single independent variable (height) and a dependent variable (weight)
 
 # 🎯 Problem Statement
 
