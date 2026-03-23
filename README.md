@@ -1,4 +1,4 @@
-# slr-height-weight-prediction
+## slr-height-weight-prediction
 
 # Height to Weight Prediction Using Simple Linear Regression
 
