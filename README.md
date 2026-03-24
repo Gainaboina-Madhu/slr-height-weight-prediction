@@ -233,7 +233,7 @@ Prediction
 <img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/7a6938f9-fda6-4ebb-8c28-89d5c72cdc11" /> 
 <img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/d7efeab6-1469-4976-aad0-9f47bb5fbec7" />
 
-# SLR Uses
+## SLR Uses
 
 1. Predicting Weight from Height
 
